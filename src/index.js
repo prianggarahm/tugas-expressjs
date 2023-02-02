@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const router = require('./routes/router');
 const userRoute = require('./routes/userRoute');
+const hobbyRoute = require('./routes/hobbyRoute');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use('/', router);
 // membuat router baru
 app.use('/about-me', router);
 app.use('/user', userRoute);
+app.use('/hobby', hobbyRoute);
 
 app.listen(process.env.SERVER_PORT, () => {
   console.log('Server Running');
